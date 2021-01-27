@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="my-canvas"></canvas>
+
+
+    <div class="night">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        
+
+
+        <div id="container">
+            
+            <p>Time paused:</p><div id="timer"></div>
+            <hr>
+
+            <div></div>
+            <button onclick="timedText()" id ="thirtySec"> Timer for 30 seconds</button>
+            <input type="text" name="" id="Output">
+
+            <hr>
+
+            
+
+            <p> Your score is <strong id="scoreTracker">0</strong> </p>
+            <br>
+            <p>Bricks Broken: <u id = "bricks2"></u> </p>
+
+            <hr>
+            <br>
+            <p> You have <u id="livesTracker"> 5</u> lives left </p>
+            <hr>
+            <br>
+            <p>press the up arrow key to add lives</p>
+
+            <p>Press esc to pause and p to resume</p>
+            <hr>
+            <p>Tap W repeatedly to speed up the ball and make the ball smaller</p>
+
+
+            <hr>
+            
+            <button id="bug">Random button</button>
+
+            <p>Look at the moving stars for a clue to a hidden feature!!!!</p>
+
+        </div>
+    
+        <script src="library.js"></script>
+        <script src="main.js"></script>
+</body>
+
+</html>
