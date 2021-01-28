@@ -46,7 +46,7 @@ for (let i = 0; i < brickColumnCount; i++) {
 function collisionDetection() {
    for (let i = 0; i < brickColumnCount; i++) {
        for (let r = 0; r < brickRowCount; r++) {
-           let b = bricks[i][r];
+           var b = bricks[i][r];
            if (b.status == 1) { //Had to google status because with out it my code did not work
                if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
                    wally = -wally;
@@ -75,7 +75,7 @@ function collisionDetection() {
 function drawBricks() {
    for (let i = 0; i < brickColumnCount; i++) {
        for (let r = 0; r < brickRowCount; r++) {
-           if (bricks[i][r].status == 1 || bricks[i][r].status == 2) {
+           if (bricks[i][r].status == 1) {
                let brickX = (i * (brickWidth + brickPadding)) + brickoffX;
                let brickY = (r * (brickHeight + brickPadding)) + brickoffY;
                bricks[i][r].x = brickX;
@@ -122,7 +122,7 @@ function drawPaddle() {
 //When certain key is cliked do this
  
 function keyDownHandler(event) {
-   levels = 2
+   levels = 2 
    if (event.keyCode === 39) {
        rightIsPressed = true;
  
@@ -228,6 +228,12 @@ function drawLevel2() {
     }
 }
   
+// function drawLevel3() {
+    
+//     drawLevel2();
+    
+    
+// }
  
  
  
@@ -251,6 +257,10 @@ function drawLevel3() {
    font('16px Arial');
    fill("orange");
    text("Game tester Samuel Oke", 205 , 290, "fill");
+
+   font('16px Arial')
+   fill("black")
+   text("Press any key to continue", 100, 250, "fill")
    
  
 }
@@ -264,6 +274,8 @@ function draw() {
        drawLevel1()
    } else if(levels == 2) {
        drawLevel2()
+//    } else if(levels == 3) {
+//        drawLevel3()
    } else {
        drawLevel3()
    }
@@ -321,5 +333,7 @@ function bugtest() {
    }
 }
  
+
+
 
 
